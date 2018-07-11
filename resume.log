@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.1-180226-2.6 (utf8.euc) (TeX Live 2018) (preloaded format=platex 2018.7.5)  5 JUL 2018 16:58
+This is e-pTeX, Version 3.14159265-p3.8.1-180226-2.6 (utf8.euc) (TeX Live 2018) (preloaded format=platex 2018.7.5)  11 JUL 2018 14:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -165,110 +165,106 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 22.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
 (Font)              scaled to size 5.76599pt on input line 22.
-File: figure1.png Graphic file (type bmp)
-<figure1.png>
-LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 8.64899pt on input line 37.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 22.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 8.64899pt on input line 37.
+(Font)              scaled to size 4.805pt on input line 22.
+ [1
 
-Underfull \hbox (badness 10000) in paragraph at lines 52--53
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 59--60
 []\OT1/cmtt/m/n/10 Peter R. Florence1, John Carter1,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 52--53
+Underfull \hbox (badness 10000) in paragraph at lines 59--60
 \OT1/cmtt/m/n/10 Jake Ware1, Russ Tedrake1, NanoMap:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 52--53
+Underfull \hbox (badness 10000) in paragraph at lines 59--60
 \OT1/cmtt/m/n/10 Fast, Uncertainty-Aware Proximity
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 52--53
+Underfull \hbox (badness 10000) in paragraph at lines 59--60
 \OT1/cmtt/m/n/10 Queries with Lazy Search over Local
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 55--56
+Underfull \hbox (badness 10000) in paragraph at lines 62--63
 []\OT1/cmtt/m/n/10 A. Hornung, K. M. Wurm, M.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 55--56
+Underfull \hbox (badness 10000) in paragraph at lines 62--63
 \OT1/cmtt/m/n/10 Bennewitz, C. Stachniss, and W.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 55--56
+Underfull \hbox (badness 10000) in paragraph at lines 62--63
 \OT1/cmtt/m/n/10 Burgard,  \JY1/gt/m/n/10 “\OT1/cmtt/m/n/10 Octomap: An effici
 ent
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 55--56
+Underfull \hbox (badness 10000) in paragraph at lines 62--63
 \OT1/cmtt/m/n/10 probabilistic 3d mapping framework
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 55--56
+Underfull \hbox (badness 10000) in paragraph at lines 62--63
 \OT1/cmtt/m/n/10 based on octrees,\JY1/gt/m/n/10 ”  \OT1/cmtt/m/n/10 Auton. Ro
 bots,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 55--56
+Underfull \hbox (badness 10000) in paragraph at lines 62--63
 \OT1/cmtt/m/n/10 vol. 34, no. 3, pp. 189{206,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 55--56
+Underfull \hbox (badness 10000) in paragraph at lines 62--63
 \OT1/cmtt/m/n/10 Apr. 2013. [Online]. Available:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 55--56
+Underfull \hbox (badness 10000) in paragraph at lines 62--63
 \OT1/cmtt/m/n/10 http://dx.doi.org/10.1007/ s10514-
  []
 
-[1
 
-
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 58--59
+Underfull \hbox (badness 10000) in paragraph at lines 65--66
 []\OT1/cmtt/m/n/10 H. Oleynikova, Z. Taylor, M. Fehr,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 58--59
+Underfull \hbox (badness 10000) in paragraph at lines 65--66
 \OT1/cmtt/m/n/10 J. Nieto, and R. Siegwart,  \JY1/gt/m/n/10 “\OT1/cmtt/m/n/10 
 Voxblox:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 58--59
+Underfull \hbox (badness 10000) in paragraph at lines 65--66
 \OT1/cmtt/m/n/10 Building 3d signed distance fields
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 58--59
+Underfull \hbox (badness 10000) in paragraph at lines 65--66
 \OT1/cmtt/m/n/10 for planning,\JY1/gt/m/n/10 ”  \OT1/cmtt/m/n/10 arXiv preprin
 t
  []
 
-[2
-
-] (./resume.aux) ) 
+[2] (./resume.aux) ) 
 Here is how much of TeX's memory you used:
- 1003 strings out of 493273
- 12100 string characters out of 6144920
- 80453 words of memory out of 5000000
- 4974 multiletter control sequences out of 15000+600000
- 13993 words of font info for 61 fonts, out of 8000000 for 9000
+ 994 strings out of 493273
+ 11985 string characters out of 6144920
+ 83453 words of memory out of 5000000
+ 4970 multiletter control sequences out of 15000+600000
+ 13505 words of font info for 59 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
- 25i,7n,21p,435b,285s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 26i,10n,21p,440b,271s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on resume.dvi (2 pages, 5132 bytes).
+Output written on resume.dvi (2 pages, 9960 bytes).

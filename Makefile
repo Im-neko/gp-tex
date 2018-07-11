@@ -2,7 +2,7 @@ FILENAME = resume
 CC=platex
 DD=dvipdfmx
 
-${FILENAME}.pdf: ${FILENAME}.dvi
+docs/resume.pdf: ${FILENAME}.dvi
 	$(DD) $<
 ${FILENAME}.dvi: ${FILENAME}.tex
 	$(CC) $<
