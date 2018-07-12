@@ -72,6 +72,24 @@ Octomapではモデリングする際に近い点群同士を同じ物体とし�
 実用性を備えた手のひらサイズ・完全オンボード処理 UAV のための 3 次元自己位置推定手法の提案と全自動飛行の実現\cite{SfMDrone}では自己位置推定で使用するセンサーはCMOSセンサーを利用した自律飛行を実現している．
 CMOSセンサーからの映像をFPGAにストリームしてFAST\cite{FAST}による特徴点抽出処理を行い，その結果をBrief\cite{Brief}を用いて表現し，MCUに流し込み処理している．この研究での目的は外部処理系に依存せず，ドローン上で全て完結する自律飛行可能な小型ドローンの開発で，限定条件下(新聞紙を敷き詰めた床面)の上で飛行させ，特徴点を十分に検出できるようにした上で，飛行させ想定通りの飛行を実現している．
 
+他領域では自動運転という繋がりで自動運転車においても同様の回避システムは利用されており，これらから得られる物も多く，Honda\cite{Honda}では前方の安全運転支援システムだけでも以下のような物が挙げられる．
+\begin{itemize}
+\item 回避支援
+  \begin{itemize}
+    \item CMBS(衝突被害軽減ブレーキ)
+    \item 誤発進抑制機能
+    \item 路外逸脱抑制機能
+    \item 歩行者事故軽減ステアリング
+  \end{itemize}
+\item 未然防止
+  \begin{itemize}
+    \item 渋滞追従機能(アダプティブクルーズコントロール)
+    \item LKAS(車線維持支援システム)
+    \item 先行車発進お知らせ機能
+    \item 標識認識機能
+  \end{itemize}
+\end{itemize}
+
 
 \section{提案手法}
 本手法では2つの部分に分かれて処理をする．まず1つ目は飛行経路を探索する処理系．もう1つが周囲の環境を認識して動く可能性の高い物体なのか，そうでない物体なのかを分類し，動く可能性の高い物体に対してはより排他的空域を広く取り，そこに侵入しないように飛行経路を選択する．
@@ -134,6 +152,9 @@ CMOSセンサーからの映像をFPGAにストリームしてFAST\cite{FAST}に
 
 \bibitem{Brief}
 \texttt{M. Calonder, V. Lepetit, C. Strecha, and P. Fua. “Brief: Binary robust independent elementary features.” In European Conference on Computer Vi- sion, 2010.}
+
+\bibitem{Honda}
+\texttt{Hondaの運転支援および自動運転の現状と今後}
 
 \end{thebibliography}
 
