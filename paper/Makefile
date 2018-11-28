@@ -1,5 +1,5 @@
 FILENAME = resume
-CC=platex
+CC=uplatex
 DD=dvipdfmx
 
 docs/resume.pdf: ${FILENAME}.dvi

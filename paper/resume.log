@@ -1,10 +1,10 @@
-This is e-pTeX, Version 3.14159265-p3.8.0-180226-2.6 (utf8.euc) (TeX Live 2018) (preloaded format=platex 2018.11.28)  28 NOV 2018 21:17
+This is e-upTeX, Version 3.14159265-p3.8.0-u1.23-180226-2.6 (utf8.uptex) (TeX Live 2018) (preloaded format=uplatex 2018.11.28)  28 NOV 2018 21:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **resume.tex
 (./resume.tex
-pLaTeX2e <2018-04-01>+1 (based on LaTeX2e <2018-04-01> patch level 2)
+pLaTeX2e <2018-04-01u02>+1 (based on LaTeX2e <2018-04-01> patch level 2)
 Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
 (/usr/local/texlive/2018/texmf-dist/tex/platex/jsclasses/jsarticle.cls
 Document Class: jsarticle 2018/03/11 jsclasses (okumura, texjporg)
@@ -18,16 +18,16 @@ LaTeX Info: Redefining \textmc on input line 476.
 LaTeX Info: Redefining \textgt on input line 478.
 \symmincho=\mathgroup4
 LaTeX Font Info:    Overwriting symbol font `mincho' in version `bold'
-(Font)                  JY1/mc/m/n --> JY1/gt/m/n on input line 540.
-LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 731.
-LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 731.
+(Font)                  JY2/mc/m/n --> JY2/gt/m/n on input line 540.
+LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
+(Font)              scaled to size 9.24683pt on input line 731.
+LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
+(Font)              scaled to size 9.24683pt on input line 731.
 \fullwidth=\dimen120
-LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 7.68799pt on input line 884.
-LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 7.68799pt on input line 884.
+LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
+(Font)              scaled to size 7.39746pt on input line 884.
+LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
+(Font)              scaled to size 7.39746pt on input line 884.
 \c@part=\count83
 \c@section=\count84
 \c@subsection=\count85
@@ -87,21 +87,9 @@ Package: layout 2014/10/28 v1.2c Show layout parameters
 (/usr/local/texlive/2018/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip10
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+) (./resume.sty
+\@abstractbox=\box43
 )
-
-! LaTeX Error: File `resume.sty' not found.
-
-Type X to quit or <RETURN> to proceed,
-or enter new name. (Default extension: sty)
-
-Enter file name: resume.sty
-
-! LaTeX Error: File `resume.sty' not found.
-
-Type X to quit or <RETURN> to proceed,
-or enter new name. (Default extension: sty)
-
-Enter file name: 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
 
@@ -141,152 +129,244 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 7.
 LaTeX Font Info:    ... okay on input line 7.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
 LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 7.
+LaTeX Font Info:    Checking defaults for JY2/mc/m/n on input line 7.
 LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 7.
+LaTeX Font Info:    Checking defaults for JT2/mc/m/n on input line 7.
 LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 8.64899pt on input line 18.
-LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 8.64899pt on input line 18.
-LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 8.64899pt on input line 18.
-LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 8.64899pt on input line 18.
- [1
-
-]
-LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 16.60605pt on input line 29.
-LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 16.60605pt on input line 29.
-LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 11.53198pt on input line 29.
-LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 11.53198pt on input line 29.
+LaTeX Font Info:    Font shape `JT2/mc/bx/n' in size <10> not available
+(Font)              Font shape `JT2/gt/m/n' tried instead on input line 18.
+LaTeX Font Info:    Font shape `JT2/gt/m/n' will be
+(Font)              scaled to size 9.24683pt on input line 18.
+LaTeX Font Info:    Font shape `JY2/mc/bx/n' in size <10> not available
+(Font)              Font shape `JY2/gt/m/n' tried instead on input line 18.
+LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
+(Font)              scaled to size 9.24683pt on input line 18.
+LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
+(Font)              scaled to size 13.31541pt on input line 29.
+LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
+(Font)              scaled to size 13.31541pt on input line 29.
+LaTeX Font Info:    Font shape `JT2/mc/bx/n' in size <14.4> not available
+(Font)              Font shape `JT2/gt/m/n' tried instead on input line 29.
+LaTeX Font Info:    Font shape `JT2/gt/m/n' will be
+(Font)              scaled to size 13.31541pt on input line 29.
+LaTeX Font Info:    Font shape `JY2/mc/bx/n' in size <14.4> not available
+(Font)              Font shape `JY2/gt/m/n' tried instead on input line 29.
+LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
+(Font)              scaled to size 13.31541pt on input line 29.
+LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
+(Font)              scaled to size 11.09619pt on input line 29.
+LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
+(Font)              scaled to size 11.09619pt on input line 29.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 29.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 29.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 29.
-LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 5.76599pt on input line 29.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 29.
- (/usr/local/texlive/2018/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <8> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 29.
+LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
+(Font)              scaled to size 5.5481pt on input line 29.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 29.
-LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 4.805pt on input line 29.
-LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 5.76599pt on input line 29.
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <6> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 29.
-LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 13.83836pt on input line 32.
-LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 13.83836pt on input line 32.
-LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 13.83836pt on input line 32.
-LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 13.83836pt on input line 32.
- [2] [3]
+LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
+(Font)              scaled to size 4.62341pt on input line 29.
+LaTeX Font Info:    Font shape `JT2/gt/m/n' will be
+(Font)              scaled to size 11.09619pt on input line 40.
+LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
+(Font)              scaled to size 11.09619pt on input line 40.
+ [1
+
+
+
+]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 76.
+LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
+(Font)              scaled to size 6.47278pt on input line 76.
+ [2]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 82.
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 81.
-LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <10> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 83.
-LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 83.
-LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 83.
-LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 83.
-File: figure1.png Graphic file (type bmp)
-<figure1.png>
-File: figure2.png Graphic file (type bmp)
-<figure2.png>
- [4]
-Underfull \hbox (badness 10000) in paragraph at lines 155--156
-[]\OT1/cmtt/m/n/10 Peter R. Florence1, John Carter1, Jake Ware1, Russ Tedrake1,
- NanoMap: Fast,
- []
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 82.
+File: img/figure1.png Graphic file (type bmp)
+<img/figure1.png>
+LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
+(Font)              scaled to size 8.32214pt on input line 104.
+LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
+(Font)              scaled to size 8.32214pt on input line 104.
+File: img/figure2.png Graphic file (type bmp)
+<img/figure2.png>
 
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 158--159
-[]\OT1/cmtt/m/n/10 A. Hornung, K. M. Wurm, M. Bennewitz, C. Stachniss, and W. B
-urgard,  \JY1/gt/m/n/10 “\OT1/cmtt/m/n/10 Octomap:
+Underfull \hbox (badness 10000) in paragraph at lines 145--146
+[]\OT1/cmtt/m/n/10 Peter R. Florence1, John Carter1,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 158--159
-\OT1/cmtt/m/n/10 An efficient probabilistic 3d mapping framework based on octre
-es,\JY1/gt/m/n/10 ”  \OT1/cmtt/m/n/10 Auton.
+Underfull \hbox (badness 10000) in paragraph at lines 145--146
+\OT1/cmtt/m/n/10 Jake Ware1, Russ Tedrake1, NanoMap:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 158--159
-\OT1/cmtt/m/n/10 Robots, vol. 34, no. 3, pp. 189{206, Apr. 2013. [Online]. Avai
-lable:
+Underfull \hbox (badness 10000) in paragraph at lines 145--146
+\OT1/cmtt/m/n/10 Fast, Uncertainty-Aware Proximity
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 161--162
-[]\OT1/cmtt/m/n/10 H. Oleynikova, Z. Taylor, M. Fehr, J. Nieto, and R. Siegwart
-,  \JY1/gt/m/n/10 “\OT1/cmtt/m/n/10 Voxblox: Building
+Underfull \hbox (badness 10000) in paragraph at lines 145--146
+\OT1/cmtt/m/n/10 Queries with Lazy Search over Local
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 167--168
-[]\OT1/cmtt/m/n/10 E. Rosten, R. Porter, and T. Drummond.  \JY1/gt/m/n/10 “\OT
-1/cmtt/m/n/10 Faster and better: A machine learning
+Underfull \hbox (badness 10000) in paragraph at lines 148--149
+[]\OT1/cmtt/m/n/10 A. Hornung, K. M. Wurm, M.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 167--168
-\OT1/cmtt/m/n/10 approach to corner detection.\JY1/gt/m/n/10 ”  \OT1/cmtt/m/n/
-10 IEEE Trans. Pattern Analysis and Machine
+Underfull \hbox (badness 10000) in paragraph at lines 148--149
+\OT1/cmtt/m/n/10 Bennewitz, C. Stachniss, and W.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 170--171
-[]\OT1/cmtt/m/n/10 M. Calonder, V. Lepetit, C. Strecha, and P. Fua.  \JY1/gt/m/
-n/10 “\OT1/cmtt/m/n/10 Brief: Binary robust
+Underfull \hbox (badness 10000) in paragraph at lines 148--149
+\OT1/cmtt/m/n/10 Burgard,  \JY2/gt/m/n/10 “\OT1/cmtt/m/n/10 Octomap: An effic
+ient
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 170--171
-\OT1/cmtt/m/n/10 independent elementary features.\JY1/gt/m/n/10 ”  \OT1/cmtt/m
-/n/10 In European Conference on Computer Vi- sion,
+Underfull \hbox (badness 10000) in paragraph at lines 148--149
+\OT1/cmtt/m/n/10 probabilistic 3d mapping framework
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 173--174
-[]\OT1/cmtt/m/n/10 Deepa Kaufmann, Antonio Loquercio, Rene Ranftl, Alexey Dosov
-itskiy, Vladlen
+Underfull \hbox (badness 10000) in paragraph at lines 148--149
+\OT1/cmtt/m/n/10 based on octrees,\JY2/gt/m/n/10 ”  \OT1/cmtt/m/n/10 Auton. R
+obots,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 173--174
-\OT1/cmtt/m/n/10 Koltun, Davide Scaramuzza, Drone Racing: Learning Agile Flight
- in Dynamic
+Underfull \hbox (badness 10000) in paragraph at lines 148--149
+\OT1/cmtt/m/n/10 vol. 34, no. 3, pp. 189 \JY2/gt/m/n/10 – \OT1/cmtt/m/n/10 20
+6,
  []
 
-[6] (./resume.aux)
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+Underfull \hbox (badness 10000) in paragraph at lines 148--149
+\OT1/cmtt/m/n/10 Apr. 2013. [Online]. Available:
+ []
 
- ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 148--149
+\OT1/cmtt/m/n/10 http://dx.doi.org/10.1007/ s10514-
+ []
+
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 151--152
+[]\OT1/cmtt/m/n/10 H. Oleynikova, Z. Taylor, M. Fehr,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 151--152
+\OT1/cmtt/m/n/10 J. Nieto, and R. Siegwart,  \JY2/gt/m/n/10 “\OT1/cmtt/m/n/10
+ Voxblox:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 151--152
+\OT1/cmtt/m/n/10 Building 3d signed distance fields
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 151--152
+\OT1/cmtt/m/n/10 for planning,\JY2/gt/m/n/10 ”  \OT1/cmtt/m/n/10 arXiv prepri
+nt
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 157--158
+[]\OT1/cmtt/m/n/10 E. Rosten, R. Porter, and T.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 157--158
+\OT1/cmtt/m/n/10 Drummond.  \JY2/gt/m/n/10 “\OT1/cmtt/m/n/10 Faster and bette
+r: A
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 157--158
+\OT1/cmtt/m/n/10 machine learning approach to corner
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 157--158
+\OT1/cmtt/m/n/10 detection.\JY2/gt/m/n/10 ”  \OT1/cmtt/m/n/10 IEEE Trans. Pat
+tern
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 157--158
+\OT1/cmtt/m/n/10 Analysis and Machine Intelligence,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 160--161
+[]\OT1/cmtt/m/n/10 M. Calonder, V. Lepetit, C. Strecha,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 160--161
+\OT1/cmtt/m/n/10 and P. Fua.  \JY2/gt/m/n/10 “\OT1/cmtt/m/n/10 Brief: Binary 
+robust
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 160--161
+\OT1/cmtt/m/n/10 independent elementary features.\JY2/gt/m/n/10 ”  \OT1/cmtt/
+m/n/10 In
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 160--161
+\OT1/cmtt/m/n/10 European Conference on Computer Vi-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 163--164
+[]\OT1/cmtt/m/n/10 Deepa Kaufmann, Antonio Loquercio,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 163--164
+\OT1/cmtt/m/n/10 Rene Ranftl, Alexey Dosovitskiy,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 163--164
+\OT1/cmtt/m/n/10 Vladlen Koltun, Davide Scaramuzza,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 163--164
+\OT1/cmtt/m/n/10 Drone Racing: Learning Agile Flight
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 163--164
+\OT1/cmtt/m/n/10 in Dynamic Environments, University
+ []
+
+[4
+
+] (./resume.aux) ) 
 Here is how much of TeX's memory you used:
- 1031 strings out of 493281
- 12486 string characters out of 6145040
- 82508 words of memory out of 5000000
- 4991 multiletter control sequences out of 15000+600000
- 15134 words of font info for 68 fonts, out of 8000000 for 9000
+ 1028 strings out of 493270
+ 12463 string characters out of 6145017
+ 83651 words of memory out of 5000000
+ 4997 multiletter control sequences out of 15000+600000
+ 13841 words of font info for 67 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
- 28i,11n,21p,439b,405s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 26i,10n,21p,780b,285s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on resume.dvi (6 pages, 19840 bytes).
+Output written on resume.dvi (4 pages, 21236 bytes).
