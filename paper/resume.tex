@@ -11,161 +11,21 @@
 
 % 和文著者名
 \author{
-    著者その1 {井手田 悠希} \thanks{慶應義塾大学}
+    著者その1 {井手田 悠希}
 }
 
 % 和文概要
-\begin{abstract}
-2018年現時点で安価で広く流通している上に小型のものも多く存在するRGBカメラを用いた自律飛行経路探索手法を提案する．
-2018年現在自律飛行で多く使用されるLIDARなどのセンサーは他の超音波やRGBカメラに比べて高価であり，またサイズも広く流通しているものは大きい物が多い．
-ドローンなどの飛行物体では自動運転車などに比べて制動距離が大きく，空間に存在する他の移動物体を認識し，前もって飛行経路を変更，ないしは減速などを行う必要がある．
-しかし、現在広く用いられているLIDARなどのセンサーでは物体の有無とその距離しか認識出来ず、その物体の意味解釈までは難しい。
-そこで，本研究では比較的安価で手に入り小型の物も多く流通しているRGBカメラを利用して，周囲の物体の意味解釈を行う自律飛行制御を目指す．
-本研究では屋内で複数機体が飛び交う環境での自律飛行を目標としている．
-将来的には他の自律飛行手法の補助となるような技術として応用されることを想定している．
-
-\end{abstract}
+\input{sections/abstract} 
 
 \maketitle
 \thispagestyle{empty}
 
-\section{はじめに}
-ドローンをRGBカメラで制御しようという考えに至った理由として，映像処理技術の向上，ドローン製作部品が現時点では比較的高価格であること，があげられる．高度維持やGPSによる位置補正など一般的な機能を備えた安定飛行できるドローンを一機製作しようとすれば，センサーの類だけで数万円はかかってしまう．
-そこで、既に小型化、低価格化が進んでいるRGBカメラを用いた画像処理による飛行経路探索を行う．
-加えて、LIDARなどのセンサーで得られる情報で障害物等自体の意味解釈まで行う事は困難である。そこで、RGBカメラを用いて周囲の映像を取得し周辺にどのような物体が存在しているのかを検出しながらの飛行が求められる。
-
-また、本研究では飛行モデルの提案を軸としており物体検出モデルの提案ではないということをここで明記させていただきたい。
-
-
-\subsection{背景}
-2010年頃からParrot社による家庭用ドローンの発売などもあり，これ以降ドローンの認知と研究開発は加速している．
-付随して，自律飛行に関しても研究が盛んに行われているが，現在行われている自律飛行ではLIDARなど他のセンサーと比較して高価なものを使用している例が多い．
-
-また広く流通しているものは大きいものばかりである．これらの問題はドローンでの活用がさらに進めばセンサー自体の開発も進み解決するだろう．しかし，LIDAR等のセンサー以外を主とした飛行経路探索手法を模索することは今後の自律飛行の精度向上に貢献すると考え，本研究を実施するに至った．
-また、本研究の課題の1つとしてLIDAR等の他のセンサー類が高価であったりまだ小型化が進んでいない事を挙げているが、センサー類の低価格化、小型化は日々進んでおり数年で課題とはならなくなると思われるが、その上でRGBカメラを他のセンサーと併用する上で周囲の物体検出は必要な技術であると考えらえる。
-
-
-\subsection{研究目的}
-本研究の目的はドローンの制御精度向上であり，本手法を単体で飛行経路選択をする以外にも，他のLIDARなどのセンサーも合わせて使用するような制御系における，制御の一助となるような使用を想定している．
-また，RGBカメラの特性上雨天時や夜間などは著しく精度が低下する事が予測される為，基本的には屋内や，明るさがある程度確保できる条件下での使用を想定している．
-その中で，本手法で用いる物体検知アルゴリズムではRGBカメラによる映像を使用する為，LIDAR等の他センサを利用するよりも安価に視野画内にある物体の意味を理解することができる．その点でLIDARなどの手法に比べて物体の特性なども考慮した判断をすることができる点が他の手法との異なる点である．
-最終的には目の前にある物体が設置物なのか，移動物体なのか等を判断した上での飛行経路の選択をする事で屋内での飛行などでもより急な制御をする事なく事前に停止したり，回避行動をとれるようになると考えられる．
-現在路面を走る車両には信号機がある為スムーズに飛行が行えるが，飛行物体に対する信号機は無い．しかし，今後様々な用途で飛び交うドローンが他のドローンと遭遇する機会が発生することは容易に想像でき，遭遇した際の事故を避ける技術が求められる．
-そこで，本研究ではドローンに積載されたRGBカメラの映像からの情報を元に機体の飛行経路を選択するアルゴリズムを提案する．
-
-\section{関連研究}
-基本的にドローンが自律飛行を行う際に必要とされる処理がいくつかある．そのうちの2つが自己位置推定と姿勢推定である．
-自己位置推定とは，ドローンが飛行している空間の中で自分がどの位置にいるのかを認識する事である．姿勢推定とは自分が水平方向に対してどの程度傾いているのか，鉛直方向に対してどの程度回転しているかを認識することある．
-
-本研究では主に自己位置推定を行い，その上で得られる周囲の情報を元にどのような飛行経路を取るかについての処理系について論を進めていく．
-
-関連研究として強く影響を受けているものが Nanomap\cite{Nanomap}である．
-Nanomapにおいては2D-LIDARを用いた飛行経路探索手法が取られており，取得した点群データを過去数フレーム分を記憶しておき，過去の数フレーム分のデータと現在のフレームとの点群の変量によっておおよその障害物の位置を認識している．こちらの手法では，物体を正確に捉えることは放棄し，不確実な部分を物体の存在している可能性のある範囲として捉えている．視野にある物体のある可能性も含めて1番物体が少ない方向を飛行経路として選定し，飛行している．
-
-他に，ドローンに限らずロボット工学全般で利用されてきたOctomap\cite{Octomap}がある．
-こちらもNanomapと同様にLIDARを用いて周辺の環境情報を扱うものであるが，こちらはLIDARを用いて実際に周囲を点群からモデリングして周辺状況を把握する．
-
-Octomapではモデリングする際に近い点群同士を同じ物体としてまとめ1つのブロックにするということを繰り返し，樹構造的に物体を生成する為，生成後のデータは繰り返す回数等のパラメータによっては小さく圧縮することもできる．
-しかし，実際に点群からモデルを生成するとなるとその計算量は非常に多く，高性能な小型コンピュータが現れている現在においても処理負荷が大きく，特にドローンにおいては積載量に制限がかかりやすい為扱いにくいものとなっている．
-
-また，これらのようにLIDARを使用せず，CMOSセンサーのみで自律飛行を行なっている例もある．
-
-実用性を備えた手のひらサイズ・完全オンボード処理 UAV のための 3 次元自己位置推定手法の提案と全自動飛行の実現\cite{SfMDrone}では自己位置推定で使用するセンサーはCMOSセンサーを利用した自律飛行を実現している．
-CMOSセンサーからの映像をFPGAにストリームしてFAST\cite{FAST}による特徴点抽出処理を行い，その結果をBrief\cite{Brief}を用いて表現し，MCUに流し込み処理している．この研究での目的は外部処理系に依存せず，ドローン上で全て完結する自律飛行可能な小型ドローンの開発で，限定条件下(新聞紙を敷き詰めた床面)の上で飛行させ，特徴点を十分に検出できるようにした上で，飛行させ想定通りの飛行を実現している．
-
-他にかなり近い関連研究としてDeepDrone\cite{DeepDrone}が挙げられる。こちらではドローンレースを自律飛行で行う為に自律飛行モデルを提案している。ドローンレースとは基本的にゲートを順に潜りながら飛行することが条件となっているドローン競技である。このゲートをRGBカメラで撮影した映像を推定モデルに対し、200*300の画像を所与として$\lbrace \vec{x}, v \rbrace$,を推定結果として得る。$\lbrace \vec{x}$は$\vec{x} \in [-1,1]^2$と定義され正規化された入力画像の中にある目標とするゲートへの方向を表していおり、 $v \in [0,1]$ は飛行速度を正規化して表している。
-
-
-他領域では自動運転という繋がりで自動運転車においても同様の回避システムは利用されており，これらから得られる物も多く，Honda\cite{Honda} では前方の安全運転支援システムだけでも以下のような物が挙げられる．
-
-\begin{itemize}
-\item 回避支援
-  \begin{itemize}
-    \item CMBS(衝突被害軽減ブレーキ)
-    \item 誤発進抑制機能
-    \item 路外逸脱抑制機能
-    \item 歩行者事故軽減ステアリング
-  \end{itemize}
-\item 未然防止
-  \begin{itemize}
-    \item 渋滞追従機能(アダプティブクルーズコントロール)
-    \item LKAS(車線維持支援システム)
-    \item 先行車発進お知らせ機能
-    \item 標識認識機能
-  \end{itemize}
-\end{itemize}
-
-
-\section{提案手法}
-
-
-\begin{figure}[htbp]
-  \includegraphics[width=7cm]{img/figure1.png}
-  \caption{動く可能性の低い物体}
-\end{figure}
-\begin{figure}[htbp]
-  \includegraphics[width=7cm]{img/figure2.png}
-  \caption{動く可能性の高い物体}
-\end{figure}
-
-まず，１つ目の飛行経路探索を行う処理系に関しては以下の条件を判断軸にして経路選択,飛行を行うものとする
-
-\begin{enumerate}
-\item 視野の中に映る検出された物体の中で画面占有率の高いものをより重要度が高いものとして設定する.
-\item 検出される物体が一番少ない何もない所を一番安全な方向として設定する．
-\item 何も検出されなくなった場合，大きな平面に直面したとして一時停止する．
-\end{enumerate}
-
-次に2つ目の検出した物体の属性を判定する部分であるが，こちらは検出時にラベルが得られるのでそのラベルをキーとして辞書データから検出する事とする．
-また，おおよその移動速度も物によって推測でき，辞書データの中に含める事で，排他的空域をどこまで広げるかを設定する．
-動くことが想定される物体よりも高い位置で飛ぶ際もその直上は落下可能性を拭いきれないので飛行禁止空域として設定する．
-
-実際に使用する技術としては以下のものの使用を考えている．
-\begin{itemize}
-\item Tello
-\item MacBookPro 2016Model
-\item Yolo v3
-\end{itemize}
-
-
-\section{評価}
-
-\section{考察}
-現時点での課題として，
-\begin{itemize}
-\item 映像転送時の映像の遅延が激しい
-\item 割り込み処理をする事が今の所出来ない(改善可能?) 
-\end{itemize}
-という事が挙げられる．
-
-
-\begin{thebibliography}{99}
-%\bibitem{a}
-\bibitem{Nanomap}
-\texttt{Peter R. Florence1, John Carter1, Jake Ware1, Russ Tedrake1, NanoMap: Fast, Uncertainty-Aware Proximity Queries with Lazy Search over Local 3D Data}
-
-\bibitem{Octomap}
-\texttt{A. Hornung, K. M. Wurm, M. Bennewitz, C. Stachniss, and W. Burgard, “Octomap: An efficient probabilistic 3d mapping framework based on octrees,” Auton. Robots, vol. 34, no. 3, pp. 189–206, Apr. 2013. [Online]. Available: http://dx.doi.org/10.1007/ s10514- 012- 9321- 0}
-
-\bibitem{Voxblox}
-\texttt{H. Oleynikova, Z. Taylor, M. Fehr, J. Nieto, and R. Siegwart, “Voxblox: Building 3d signed distance fields for planning,” arXiv preprint arXiv:1611.03631, 2016.}
-
-\bibitem{SfMDrone}
-\texttt{此村 領, 堀 浩1, 実用性を備えた手のひらサイズ・完全オンボード処理 UAV のための 3 次元自己位置推定手法の提案と全自動飛行の実現, 東京大学工学系研究科航空宇宙工学専攻}
-
-\bibitem{FAST}
-\texttt{E. Rosten, R. Porter, and T. Drummond. “Faster and better: A machine learning approach to corner detection.” IEEE Trans. Pattern Analysis and Machine Intelligence, 32:105-119, 2010.}
-
-\bibitem{Brief}
-\texttt{M. Calonder, V. Lepetit, C. Strecha, and P. Fua. “Brief: Binary robust independent elementary features.” In European Conference on Computer Vi- sion, 2010.}
-
-\bibitem{DeepDrone}
-\texttt{Deepa Kaufmann, Antonio Loquercio, Rene Ranftl, Alexey Dosovitskiy, Vladlen Koltun, Davide Scaramuzza, Drone Racing: Learning Agile Flight in Dynamic Environments, University of Zurich and ETH Zurich Intel Labs}
-
-\bibitem{Honda}
-\texttt{横山 利夫,武田 政宣,藤田 進太郎,安井 裕司,Hondaの運転支援および自動運転の現状と今後,本田技術研究所四輪R＆D センター 栃木県芳賀郡芳賀町下高根沢}
-
-\end{thebibliography}
+\input{sections/introduction}
+\input{sections/rel_work}
+\input{sections/methodology}
+\input{sections/experiments}
+\input{sections/result}
+\input{sections/biblio}
 
 \end{document}
 % end of file
