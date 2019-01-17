@@ -1,4 +1,4 @@
-# README
+#README
 
 # 課題
 ドローンの自律飛行
@@ -7,10 +7,11 @@ LIDERだけでは物体の性質までは分からない
 
 
 # 既存のもの
-[RGBカメラでゲートを認識して飛行](https://arxiv.org/pdf/1806.08548.pdf)
+[Deep Drone Racing: Learning Agile Flight in Dynamic Environments](https://arxiv.org/pdf/1806.08548.pdf)
 
 
 # 手法
+
 
 
 # 評価
