@@ -1,24 +1,35 @@
-\section{提案手法}
-スマートフォン，もしくはタブレット端末にデータが送られてくる種類のドローンを対象としている．
-まず通常飛行と同様にスマートフォンとドローンを任意の専用アプリケーションを用いて接続する．
-その後，スマートフォンをPCに対して画面共有を行い，PCは共有された画面の映像を入力として，その映像に対し，Yolo v3を用いて物体検知を行い，その結果を描写した映像をPC上に表示する．
-\begin{figure}[htbp]
-  \begin{center}
-    \includegraphics[clip,width=7.0cm]{img/sys-struct.png}
-    \caption{構成図}
-    \label{fig:struct}
-  \end{center}
-\end{figure}
-
-
+\section{システム概要}
 \subsection{使用環境}
 今回は以下の環境で開発を行った．
 \begin{itemize}
   \item MacBookPro 2017 Model
-  \item iPhone X
-  \item QuickTime Player
+  \item Parrot Mambo FPV
+  \item ffmpeg
   \item Python 3.6.8 |Anaconda|
-  \item Yolo v3
+  \item OpenCV
 \end{itemize}
 
 
+\subsection{実装内容}
+今回使用した機種はwifiを通じて機体とコンピュータで制御命令，映像を通信する事が可能である．
+機体では起動時にrtsp形式で映像を配信するサーバーが立ち上がる為，コンピュータ側から接続し，映像を取得する．
+取得した映像からハフ変換\cite{hough}を用いて円形の抽出をする．
+手順としてはフラフープの色に近い色を抽出し，グレースケールにする．
+次に抽出精度上げるために画像の平滑化を行い，OpenCVで用意されている検出器にかける．
+
+円が検出されなければその場で停止し，検出された場合には以下の流れを取る．
+また，制御するにあたって信用する円の事をここでは目的円と表記する.
+検出円が１つの場合
+\begin{enumerate}
+  \item 円の中心点と映像フレームの中心点との比較を行う
+  \item 中心点とのズレを基に機体の位置修正を行う
+  \item 円の中心点と映像フレームの中心点とがある程度一致した場合直進する．
+\end{enumerate}
+
+検出円が複数の場合
+検出器の特性上検出円の中心点を通る円の中心点がそれぞれの円の中心点よりも実際のフラフープの中心に近い事が分かっている．
+よって，複数ある場合はなるべく多くの検出円の中心点を通る円を目的
+\begin{enumerate}
+  \item 中心点とのズレを基に機体の位置修正を行う
+  \item 円の中心点と映像フレームの中心点とがある程度一致した場合直進する．
+\end{enumerate}
