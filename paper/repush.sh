@@ -1,5 +1,5 @@
 #!/bin/bash
-cd paper
+cd `dirname $0`
 
 git config --global user.name "im-neko"
 git config --global user.email "yuki@ideta.net"
