@@ -1,6 +1,8 @@
 #!/bin/bash
 cd `dirname $0`
-
+echo `dirname $0`
+pwd
+ls
 git config --global user.name "im-neko"
 git config --global user.email "yuki@ideta.net"
 
