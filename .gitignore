@@ -1,6 +1,5 @@
-*/resume.dvi
-*/resume.log
-*/resume.aux
+!*/thesis.tex
+*/thesis.*
 *.swp
 *.pdf
 .DS_Store
