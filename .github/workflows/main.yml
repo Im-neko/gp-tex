@@ -12,5 +12,5 @@ jobs:
     - name: test
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: ./paper/make.sh
+      run: sh ./paper/make.sh
       
