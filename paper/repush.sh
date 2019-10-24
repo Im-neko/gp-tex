@@ -16,8 +16,8 @@ git log -1
 last_commit_message="$(git log -1 | tail -1)"
 echo $last_commit_message
 
-docker run --rm -v $PWD:/workdir paperist/alpine-texlive-ja uplatex thesis.tex
-docker run --rm -v $PWD:/workdir paperist/alpine-texlive-ja dvipdfmx thesis.dvi
+docker run --rm -v $PWD:/workdir paperist/alpine-texlive-ja:2018 uplatex thesis.tex
+docker run --rm -v $PWD:/workdir paperist/alpine-texlive-ja:2018 dvipdfmx thesis.dvi
 
 git add thesis.pdf
 git commit -m '[updater] update pdf'
