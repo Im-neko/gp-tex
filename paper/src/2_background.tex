@@ -3,12 +3,15 @@
 
 本章では本研究の背景について述べる．
 
-\if0
-\begin{figure}[h]
-    \begin{center}
-        \includegraphics[scale=0.4]{./img/hashrate.png}
-        \caption{2017年1月のハッシュレート分布 出典：Blockchain.info\cite{bitcoinhashrate}}
-        \label{img:hashrate}
-    \end{center}
-\end{figure}
-\fi
+\section{積載量の変化による影響}
+多くのロボット向けのナビゲーションシステムは陸上の移動を前提に作られているものが多く，そのままドローンに導入しようとするとその特性故に導入コストが陸上移動前提のロボットよりも高くなる.
+大きな違いとして積載物の重さによって航続可能時間が大きく変わる為非常に慎重にならなければならないことが挙げられる．
+ここで2019年11月にDJI社\footnote{中国に本社を置くドローンメーカ}より発売されたMavicMiniを例に積載量の変化による後続可能時間の変化をみてみる．
+日本国内発売機(本体重量199g)での本来の最大飛行可能時間が18分なのに対して，23.5gのプロペラガードを装着すると12分まで最大飛行可能時間が短くなる\footnote{最大飛行時間と重さはDJI社の技術仕様ページに記載されている.}とされている.
+% mavic mini仕様: https://www.dji.com/jp/mavic-mini
+% プロペラガード仕様: https://store.dji.com/jp/product/mavic-mini-360-propeller-guard
+
+\section{既存手法での課題}
+現状GPSが利用できない状況での自己位置推定手法としてはLIDAR\footnote{レーザを利用した距離計測器}を用いたSLAM(\ref{slam}章で説明
+
+\section{}
