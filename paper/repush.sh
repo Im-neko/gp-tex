@@ -21,12 +21,12 @@ sleep 1s
 docker run --rm -v $PWD:/workdir paperist/alpine-texlive-ja:latest platex thesis.tex
 docker run --rm -v $PWD:/workdir paperist/alpine-texlive-ja:latest dvipdfmx thesis.dvi
 
-sed -e 's/paper\/thesis.pdf/!paper\/thesis.pdf/g' ../.gitignore > ../.gitignore
-git add thesis.pdf
+cd ../ && sed -e 's/paper\/thesis.pdf/!paper\/thesis.pdf/g' .gitignore > .gitignore
+git add .
 git commit -m '[updater] update pdf'
 git push origin HEAD
 
-sed -e 's/!paper\/thesis.pdf/paper\/thesis.pdf/g' ../.gitignore > ../.gitignore
-git add ../.gitignore
+sed -e 's/!paper\/thesis.pdf/paper\/thesis.pdf/g' .gitignore > .gitignore
+git add .
 git commit -m '[updater] update pdf'
 git push origin HEAD
