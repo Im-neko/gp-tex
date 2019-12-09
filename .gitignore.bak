@@ -4,4 +4,4 @@ paper/thesis.*
 .DS_Store
 
 !paper/thesis.tex
-paper/thesis.pdf
+!paper/thesis.pdf
