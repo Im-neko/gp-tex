@@ -1,7 +1,0 @@
-paper/thesis.*
-*.swp
-*.pdf
-.DS_Store
-
-!paper/thesis.tex
-paper/thesis.pdf
