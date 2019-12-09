@@ -26,8 +26,3 @@ git add .
 git commit -m '[updater] update pdf'
 git push origin HEAD
 
-cp ../.gitignore ../.gitignore.bak && sed -e 's/!paper\/thesis.pdf/paper\/thesis.pdf/g' ../.gitignore.bak > ../.gitignore
-rm ../.gitignore.bak
-git add .
-git commit -m '[updater] update pdf'
-git push origin HEAD
