@@ -1,8 +1,6 @@
 #!/bin/bash
 cd `dirname $0`
-echo `dirname $0`
-pwd
-ls
+
 git config --global user.name "im-neko"
 git config --global user.email "yuki@ideta.net"
 
@@ -23,6 +21,12 @@ sleep 1s
 docker run --rm -v $PWD:/workdir paperist/alpine-texlive-ja:latest platex thesis.tex
 docker run --rm -v $PWD:/workdir paperist/alpine-texlive-ja:latest dvipdfmx thesis.dvi
 
+sed -e 's/paper\/thesis.pdf/!paper\/thesis.pdf/g' ../.gitignore > ../.gitignore
 git add thesis.pdf
+git commit -m '[updater] update pdf'
+git push origin HEAD
+
+sed -e 's/!paper\/thesis.pdf/paper\/thesis.pdf/g' ../.gitignore > ../.gitignore
+git add ../.gitignore
 git commit -m '[updater] update pdf'
 git push origin HEAD
