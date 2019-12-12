@@ -4,9 +4,18 @@
 本章では提案手法について述べる．
 
 \section{概要}
-基本の構成は以前作成した飛行モデルと変わらず，フラフープ検出部分をQRコードに変更したモデルで第一段階の実験を行う．
+本研究では機材の都合上映像からの自己位置推定，機体コントロールの計算処理を遠隔PC上で行う．
+全体像は以下のようになっており，大きく分けて以下のシステムで構成される．
 
+\ref{proposed_controller}
+\ref{proposed_video}
+\ref{proposed_tracker}
+\ref{proposed_navigation}
 
+\input{src/4_proposed/controller}
+\input{src/4_proposed/video}
+\input{src/4_proposed/tracker}
+\input{src/4_proposed/navigation}
 
 %%% Local Variables:
 %%% mode: japanese-latex
