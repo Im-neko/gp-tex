@@ -2,5 +2,7 @@ paper/thesis.*
 *.swp
 *.pdf
 .DS_Store
+venv
+.env
 
 !paper/thesis.tex
