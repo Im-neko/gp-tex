@@ -5,12 +5,15 @@
 
 \section{概要}
 本研究では機材の都合上映像からの自己位置推定，機体コントロールの計算処理を遠隔PC上で行う．
-全体像は以下のようになっており，大きく分けて以下のシステムで構成される．
 
-~\ref{proposed_controller}
-~\ref{proposed_video}
-~\ref{proposed_tracker}
-~\ref{proposed_navigation}
+全体のシステム構成は以下の図~\ref{fig:all_struct}の通りである．
+\begin{figure}[htbp]
+  \begin{center}
+    \includegraphics[clip,width=7.0cm]{img/all_struct.png}
+    \caption{システム概要図}
+    \label{fig:all_struct}
+  \end{center}
+\end{figure}
 
 \input{src/4_proposed/controller}
 \input{src/4_proposed/video}
