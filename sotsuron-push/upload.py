@@ -37,6 +37,7 @@ class Browser:
             '/tbody/tr[3]/td/input').click()
 
     def go_upload_page(self):
+        print("go upload page")
         time.sleep(3)
         self.browser.find_element_by_xpath(
             '/html/body/table[3]/tbody/tr/td[1]'
@@ -47,6 +48,7 @@ class Browser:
         time.sleep(3)
         self.iframe = self.browser.find_element_by_xpath(
             '//*[@id="frame_set"]')
+        print("switch driver")
         self.browser.switch_to_frame(self.iframe)
         try:
             self.browser.find_element_by_xpath(
@@ -58,6 +60,7 @@ class Browser:
                 ' when it is the first time to upload.')
 
     def delete_old_file(self):
+        print("delete old file")
         time.sleep(8)
         self.browser.find_element_by_xpath(
             '/html/body/table[1]/tbody/tr[7]/td[3]/a[2]') \
@@ -68,6 +71,7 @@ class Browser:
             .click()
 
     def file_upload(self):
+        print("file upload")
         time.sleep(3)
         self.browser.find_element_by_name('file_title') \
             .send_keys(self.file_title)
@@ -86,7 +90,8 @@ class Browser:
 
 
 def main():
-    time.sleep(10)  # wait for chrome
+    print("waiting for chrome...")
+    time.sleep(10)
     browser = Browser()
     browser.post()
     print("login as: ", browser.u_login)
