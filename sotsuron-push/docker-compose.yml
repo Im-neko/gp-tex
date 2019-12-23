@@ -22,10 +22,11 @@ services:
       - hub
 
   uploader:
-    image: imneko/thesis-uploader
+    image: imneko/thesis-uploader:latest
     environment:
       LOGIN_ID: $LOGIN_ID
       LOGIN_PASS: $LOGIN_PASS
       FILE_TITLE: $FILE_TITLE
     links:
+      - chrome
       - hub
