@@ -22,7 +22,7 @@ services:
       - hub
 
   uploader:
-    image: imneko/thesis-uploader:latest
+    image: imneko/thesis-uploader:stable
     environment:
       LOGIN_ID: $LOGIN_ID
       LOGIN_PASS: $LOGIN_PASS
