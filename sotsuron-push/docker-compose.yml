@@ -22,14 +22,10 @@ services:
       - hub
 
   uploader:
-    build:
-      context: .
-      args:
-        LOGIN_ID: $LOGIN_ID
-        LOGIN_PASS: $LOGIN_PASS
-        FILE_TITLE: $FILE_TITLE
-      dockerfile: Dockerfile
-    volumes:
-      - ../:/src
+    image: docker.pkg.github.com/im-neko/rg-thesis-template/uploader:latest
+    environment:
+      LOGIN_ID: $LOGIN_ID
+      LOGIN_PASS: $LOGIN_PASS
+      FILE_TITLE: $FILE_TITLE
     links:
       - hub

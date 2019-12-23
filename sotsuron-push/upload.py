@@ -38,14 +38,14 @@ class Browser:
 
     def go_upload_page(self):
         print("go upload page")
-        time.sleep(3)
+        time.sleep(1)
         self.browser.find_element_by_xpath(
             '/html/body/table[3]/tbody/tr/td[1]'
             '/table/tbody/tr[7]/td/a/img').click()
-        time.sleep(3)
+        time.sleep(1)
         self.browser.find_element_by_xpath(
             '//*[@id="navigation"]/div[4]/a').click()
-        time.sleep(3)
+        time.sleep(1)
         self.iframe = self.browser.find_element_by_xpath(
             '//*[@id="frame_set"]')
         print("switch driver")
@@ -66,19 +66,19 @@ class Browser:
         self.browser.find_element_by_xpath(
             '/html/body/table[1]/tbody/tr[7]/td[3]/a[2]') \
             .click()
-        time.sleep(3)
+        time.sleep(1)
         self.browser.find_element_by_xpath(
             '/html/body/form/p[1]/table/tbody/tr[6]/td[3]/a[2]') \
             .click()
 
     def file_upload(self):
         print("file upload")
-        time.sleep(3)
+        time.sleep(1)
         self.browser.find_element_by_name('file_title') \
             .send_keys(self.file_title)
         self.browser.find_element_by_name('upload_file') \
             .send_keys(self.file_path)
-        time.sleep(3)
+        time.sleep(1)
         self.browser.find_element_by_xpath(
             '/html/body/form/p[1]/table/tbody'
             '/tr[7]/td[3]/input[7]').click()
