@@ -86,6 +86,7 @@ class Browser:
 
 
 def main():
+    time.sleep(10)  # wait for chrome
     browser = Browser()
     browser.post()
     print("login as: ", browser.u_login)

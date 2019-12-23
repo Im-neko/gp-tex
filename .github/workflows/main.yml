@@ -24,4 +24,4 @@ jobs:
         LOGIN_ID: ${{ secrets.LOGIN_ID }}
         LOGIN_PASS: ${{ secrets.LOGIN_PASS }}
         FILE_TITLE: ${{ secrets.FILE_TITLE }}
-      run: cd sotsuron-push && docker-compose up -d hub uploader && docker network ls && docker-compose logs -f uploader
+      run: cd sotsuron-push && docker-compose up -d hub uploader && docker-compose logs -f uploader
