@@ -22,7 +22,7 @@ services:
       - hub
 
   uploader:
-    image: docker.pkg.github.com/im-neko/rg-thesis-template/uploader:latest
+    image: imneko/thesis-uploader
     environment:
       LOGIN_ID: $LOGIN_ID
       LOGIN_PASS: $LOGIN_PASS
