@@ -62,6 +62,7 @@ class Browser:
     def delete_old_file(self):
         print("delete old file")
         time.sleep(8)
+        print(self.browser.page_source)
         self.browser.find_element_by_xpath(
             '/html/body/table[1]/tbody/tr[7]/td[3]/a[2]') \
             .click()
