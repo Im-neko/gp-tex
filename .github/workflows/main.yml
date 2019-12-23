@@ -13,14 +13,6 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: sh ./paper/repush.sh
-
-  upload:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v1
-    - name: show directory
-      run: pwd && ls && ls paper
     - name: upload thesis
       env: 
         LOGIN_ID: ${{ secrets.LOGIN_ID }}
