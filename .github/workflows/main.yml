@@ -15,6 +15,7 @@ jobs:
       run: sh ./paper/repush.sh
 
   upload:
+    needs: build
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
@@ -23,6 +24,4 @@ jobs:
         LOGIN_ID: ${{ secrets.LOGIN_ID }}
         LOGIN_PASS: ${{ secrets.LOGIN_PASS }}
         FILE_TITLE: ${{ secrets.FILE_TITLE }}
-      run: cd sotsuron-push && docker-compose up -d hub uploader
-    - name: wait for upload
-      run: docker-compose logs -f uploader
+      run: cd sotsuron-push && docker-compose up -d hub uploader && docker-compose logs -f uploader
