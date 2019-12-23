@@ -20,7 +20,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: show directory
-      run: pwd && ls
+      run: pwd && ls && ls paper
     - name: upload thesis
       env: 
         LOGIN_ID: ${{ secrets.LOGIN_ID }}

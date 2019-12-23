@@ -29,5 +29,7 @@ services:
         LOGIN_PASS: $LOGIN_PASS
         FILE_TITLE: $FILE_TITLE
       dockerfile: Dockerfile
+    volumes:
+      - ../:/src
     links:
       - hub
