@@ -1,3 +1,24 @@
 \section{SLAM}
 \label{slam}
-SLAMの説明を書く
+SLAMの説明を以下にMathWorks\footnote{MathWorksはエンジニアや研究者向け数値解析ソフトウェアのリーディングカンパニー}より引用する.
+
+\begin{quotation}
+SLAM (Simultaneous Localization and Mapping, 自己位置推定と環境地図作成の同時実行) とは移動体の自己位置推定と環境地図作成を同時に行う技術の総称です。
+SLAMを活用することで、移動体が未知の環境下で環境地図を作成することができます。
+構築した地図情報を使って障害物などを回避しつつ、特定のタスクを遂行します。
+\end{quotation}
+
+代表的な物にVisual SLAMやLiDAR SLAMが挙げられる．\cite{slam_mathwork}
+
+\subsection{Visual SLAM}
+Visual SLAMは主にカメラやイメージセンサからのデータを利用したSLAMである．
+比較的安価で且つ小型化も進んでいる為小型ロボットへの組み込みが期待できる．
+しかし，単眼カメラを利用する場合は距離計測を行う為にカメラの内部パラメータ\footnote{カメラの焦点距離や歪みなどを表すパラメータ}
+をカメラキャリブレーションによって取得する，もしくは，別途距離を計測できるようなセンサと併用する必要がある．
+
+\subsection{LiDAR SLAM}
+LiDAR(Light Detection and Ranging) というレーザ用いた距離センサを利用したSLAMである．
+カメラ等の他のセンサに比べて精度が高く移動速度の速いロボットにおいて利用されている．
+LiDARからは2Dもしくは3Dの点群データが出力され，これらの点群データを用いて点群地図を作成や，
+更に処理を加えてボクセルを作成して環境地図を作成する．
+ボクセルを生成する手法としてはOctomap\cite{Octomap}が有名である．
