@@ -3,6 +3,16 @@
 トラッカーノードの実装にはOpenCVを用いる．
 本ノードではQRコードの検出と3次元再構成を行う．
 
+実際にスマートフォン上に表示したQRコードに対して姿勢推定結果を描画したものを以下の図\ref{pnp_qr_img}に示す
+
+\begin{figure}[htbp]
+  \begin{center}
+    \includegraphics[clip,width=15.0cm]{img/pnp_qr.png}
+    \caption{QRコードの姿勢推定結果}
+    \label{pnp_qr_img}
+  \end{center}
+\end{figure}
+
 ソースコードの該当部分をそれぞれ以下のプログラム\ref{src_pnp}に示す．
 
 \begin{lstlisting}[caption=pnp\_qr.py,label=src_pnp]
@@ -50,13 +60,3 @@ while True:
         if k == 's':
             cv2.imwrite(fname[:6]+'.png', img)
 \end{lstlisting}
-
-実際にスマートフォン上に表示したQRコードに対して姿勢推定を行ったものを分かりやすく表示すると以下のようになる．
-
-\begin{figure}[htbp]
-  \begin{center}
-    \includegraphics[clip,width=15.0cm]{img/pnp_qr.png}
-    \caption{QRコードの姿勢推定}
-    \label{fig:pnp_qr_img}
-  \end{center}
-\end{figure}
