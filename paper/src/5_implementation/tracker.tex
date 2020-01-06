@@ -50,3 +50,13 @@ while True:
         if k == 's':
             cv2.imwrite(fname[:6]+'.png', img)
 \end{lstlisting}
+
+実際にスマートフォン上に表示したQRコードに対して姿勢推定を行ったものを分かりやすく表示すると以下のようになる．
+
+\begin{figure}[htbp]
+  \begin{center}
+    \includegraphics[clip,width=15.0cm]{img/pnp_qr.png}
+    \caption{QRコードの姿勢推定}
+    \label{fig:pnp_qr_img}
+  \end{center}
+\end{figure}
