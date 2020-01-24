@@ -2,14 +2,14 @@ version: '2'
 
 services:
   hub:
-    image: selenium/hub:2.44.0
+    image: selenium/hub:3.141.59
     ports:
       - "4444:4444"
     volumes:
       - ../:/src
 
   chrome:
-    image: selenium/node-chrome-debug:2.44.0
+    image: selenium/node-chrome-debug:3.141.59
     ports:
       - "15900:5900"
     environment:
