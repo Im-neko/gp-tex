@@ -39,16 +39,18 @@ QRコードには次に向かうべきQRコードの座標データが相対座�
     \caption{各自己位置推定手法との比較}
     \label{table:compare_localization}
     \centering
-    \begin{tabular}{ccccc}
-        \hline
-        手法 & 推定に必要な機材 & 環境地図 & 拡大時の計算量 & 利用不可環境 \\
-        \hline \hline
-        Visual SLAM & RGBカメラ & 有 & 増加 & 色変化の少ない環境\\
-        LiDAR SLAM & LiDAR & 有 & 増加 & 光透過性の高い環境\\
-        TDOA & 電波送信機/受信機 & 無 & 変化なし & 電波ノイズの高い環境\\
-        本手法 & RGBカメラ/QRコード & 無 & 変化なし & 環境変化が激しい環境\\
-        \hline
-    \end{tabular}
+    \scalebox{0.9}{
+        \begin{tabular}{ccccc}
+            \hline
+            手法 & 推定に必要な機材 & 環境地図 & 拡大時の計算量 & 利用不可環境 \\
+            \hline \hline
+            Visual SLAM & RGBカメラ & 有 & 増加 & 色変化の少ない環境\\
+            LiDAR SLAM & LiDAR & 有 & 増加 & 光透過性の高い環境\\
+            TDOA & 電波送信機/受信機 & 無 & 変化なし & 電波ノイズの高い環境\\
+            本手法 & RGBカメラ/QRコード & 無 & 変化なし & 環境変化が激しい環境\\
+            \hline
+        \end{tabular}
+    }
 \end{table}
 
 \begin{table}[h]
@@ -57,11 +59,11 @@ QRコードには次に向かうべきQRコードの座標データが相対座�
     \centering
     \begin{tabular}{cccc}
         \hline
-        手法 & 外部通信の有無 & 環境地図 & 拡大時の計算量 \\
+        手法 & 外部通信の有無 & 経路変更方法 & 機体変更方法 \\
         \hline \hline
-        埋め込み型 & RGBカメラ & 有 & 増加 \\
-        中央管理型 & LiDAR & 有 & 増加 \\
-        本手法 & RGBカメラ/QRコード & 無 & 変化なし \\
+        埋め込み型 & 無 & ソフトウェアアップデート & 機体変更後\\
+        中央管理型 & 有 & 特になし &  \\
+        本手法 & 無 & QRコードの変更・貼り替え &  \\
         \hline
     \end{tabular}
 \end{table}
