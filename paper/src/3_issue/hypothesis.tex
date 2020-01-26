@@ -34,6 +34,20 @@ QRコードには次に向かうべきQRコードの座標データが相対座�
 
 \subsection{各アプローチとの比較}
 以下に既存手法との比較を表にしたものを示す．
-比較対象はLiDAR SLAM, Visual SLAM, TDOAを対象とする．
 
-ここに表をいれる
+\begin{table}[h]
+    \caption{各自己位置推定手法との比較}
+    \label{table:compare_each_aprouch}
+    \centering
+     \begin{tabular}{cccc}
+      \hline
+      手法 & ナビゲーションに必要とするセンサ & 環境地図の有無 & 規模の拡大に伴う計算量の変化\\
+       & & & \\
+      \hline \hline
+      Visual SLAM & RGBカメラ & 有 & 増加\\
+      LiDAR SLAM & Roemer & 木製の衛星の観測から & 2 \\
+      TDOA & Bradley & 星の収差から & 3.01 \\
+      QRコードを用いた手法 & Fizeau & 高速に回転する歯車を通過する光を見る & 3.133 \\
+      \hline
+     \end{tabular}
+   \end{table}
