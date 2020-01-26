@@ -4,23 +4,18 @@
 本章では提案手法について述べる．
 
 \section{概要}
-本研究では機材の都合上映像からの自己位置推定，機体コントロールの計算処理を遠隔PC上で行う．
+~\ref{issue}章で述べた仮説を検証するために，本研究の手法について解説する．
 
-全体のシステム構成は以下の図~\ref{fig:all_struct}の通りである．
+\subsection{問題解決の為のアプローチ}
+
 \begin{figure}[htbp]
   \begin{center}
-    \includegraphics[clip,width=15.0cm]{img/all_struct.png}
-    \caption{システム概要図}
-    \label{fig:all_struct}
+    \includegraphics[clip,width=15.0cm]{img/flow.png}
+    \caption{ナビゲーション時の簡略図}
+    \label{flow_sample}
   \end{center}
 \end{figure}
 
-本研究ではROSの使用を前提としたシステム設計となっている．
-
-\input{src/4_proposed/controller}
-\input{src/4_proposed/video}
-\input{src/4_proposed/tracker}
-\input{src/4_proposed/navigation}
 
 %%% Local Variables:
 %%% mode: japanese-latex
