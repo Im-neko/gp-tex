@@ -1,11 +1,10 @@
 \section{映像部}
 \label{implement_video}
-今回はSDKとして用意されていたlibh264decoderというC++のプログラムを利用した．
-また，そこから得られた画像を利用し易い形に以下プログラム\ref{video_loop_method}を用いて利用した
-controllerではtello SDKで用意されているtelloクラスを継承して利用している．
+今回はSDKとして用意されていたlibh264decoderというC++のプログラムをpythonから呼び出す形で利用した．
+また，そこから得られた画像を利用し易い形に以下プログラム\ref{video_loop_method}を用いて変換した．
 
 ここではself.droneという変数で参照が可能となっている
-\begin{lstlisting}[caption=controller.py,label=video_loop_method]
+\begin{lstlisting}[caption=video loop method,label=video_loop_method]
 def video_loop(self):
     try: 
         time.sleep(0.5)
