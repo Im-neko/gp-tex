@@ -39,12 +39,12 @@ QRコードには次に向かうべきQRコードの座標データが相対座�
     \caption{各自己位置推定手法との比較}
     \label{table:compare_localization}
     \centering
-    \scalebox{0.9}{
+    \scalebox{0.8}{
         \begin{tabular}{ccccc}
             \hline
             手法 & 推定に必要な機材 & 環境地図 & 拡大時の計算量 & 利用不可環境 \\
             \hline \hline
-            Visual SLAM & RGBカメラ & 有 & 増加 & 色変化の少ない環境\\
+            Visual SLAM & RGBカメラ・イメージセンサ & 有 & 増加 & 色変化の少ない環境\\
             LiDAR SLAM & LiDAR & 有 & 増加 & 光透過性の高い環境\\
             TDOA & 電波送信機/受信機 & 無 & 変化なし & 電波ノイズの高い環境\\
             提案手法 & RGBカメラ/QRコード & 無 & 変化なし & 障害物の位置が変化する環境\\
