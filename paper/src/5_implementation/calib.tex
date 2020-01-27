@@ -6,7 +6,7 @@
 
 今回はOpenCVのフィンdChessboardCorners関数を用いてチェスボードの格子点を検出し，
 そのデータを用いてcalibrateCamera関数を用いてキャリブレーションを行った．
-キャリブレーションには一マス2.45cmの正方形が縦7マス横10マスに並ぶチェスボードと呼ばれる格子模様の画像100枚を利用してキャリブレーションを行った．
+キャリブレーションには一マス2.40cmの正方形が縦7マス横10マスに並ぶチェスボードと呼ばれる格子模様の画像100枚を利用してキャリブレーションを行った．
 
 \begin{lstlisting}[caption=calibration code,label=calib_code]
 def calib(self, frame):                                                                                                                                      
