@@ -1,6 +1,6 @@
 \section{評価結果}
 今回倉庫棚を想定した棚での飛行実験は安定して想定通りの経路を飛行を行う事が出来た\footnote{\url{https://youtu.be/pw23Vq8DuHE}}．
-具体的な飛行成績は以下の通りである．
+具飛行成績表を以下に示す.\ref{table:fly_result}
 
 \begin{table}[h]
     \caption{飛行結果}
@@ -24,14 +24,24 @@
     \end{tabular}
 \end{table}
 
-初回の位置合わせに時間がかかる事が多いものの，二つ目以降の位置合わせには時間差はあまり出なかった．
-以下に90回分の位置補正にかかった時間データの箱ひげ図を示す．\ref{box_plot}
+コースを10周した時の1周あたりの時間のグラフを以下に示す．\ref{rap_plot}
+
+\begin{figure}[htbp]
+  \begin{center}
+    \includegraphics[clip,width=15.0cm]{img/rapdata.png}
+    \caption{コースの周回時間}
+    \label{rap_plot}
+  \end{center}
+\end{figure}
+
+位置補正の時間計測に関して初回の位置合わせに時間がかかる事が多いものの，二つ目以降の位置合わせには時間差はあまり出なかった．
+以下に90回分の位置補正にかかった時間データの箱ひげ図を示す．\ref{postime_plot}
 
 \begin{figure}[htbp]
     \begin{center}
       \includegraphics[clip,width=15.0cm]{img/timedata.png}
       \caption{位置補正に要した時間}
-      \label{box_plot}
+      \label{postime_plot}
     \end{center}
   \end{figure}
 
