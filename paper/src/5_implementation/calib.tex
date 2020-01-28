@@ -1,11 +1,11 @@
 \section{カメラキャリブレーション}
 \label{calib}
 
-はじめにカメラの内部パラメータ(焦点距離，歪み係数)を計算するためにカメラキャリブレーションを行う．
+はじめにカメラの内部パラメータ(焦点距離，歪み係数)を計算するためにカメラキャリブレーションを行う\cite{calib}．
 ここで得られるパラメータはカメラ毎に固有の値となる為新しいカメラを利用する場合は毎回行う必要がある．
 
-今回はOpenCVのフィンdChessboardCorners関数を用いてチェスボード\ref{chessboard}の格子点を検出し，
-そのデータを用いてcalibrateCamera関数\ref{calib_code}を用いてキャリブレーションを行った．
+今回はOpenCVのfindChessboardCorners関数\cite{cvcalib}を用いてチェスボード\ref{chessboard}の格子点を検出し，
+そのデータを用いてcalibrateCamera関数を用いてキャリブレーションを行った\ref{calib_code}．
 キャリブレーションには一マス2.40cmの正方形が縦8マス横11マスに並ぶチェスボードと呼ばれる格子模様の画像100枚を利用してキャリブレーションを行った．
 
 \begin{lstlisting}[caption=calibration code,label=calib_code]
