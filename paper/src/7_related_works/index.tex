@@ -63,14 +63,17 @@ DeepDroneでは訓練にシミュレータでのデータと現実世界での�
 \section{TDOAを用いたUAVの自己位置推定}
 他に屋内でドローンの位置測位を行っている例として
 Scalable and Precise Multi-UAV Indoor Navigation\cite{TDOA-UWB}が挙げられる．
-これはTDOA-UWBという方式を用いたものである．TDOA(Time Differences of Arrival)とは
+これはTDOAという方式を用いたものである．TDOA(Time Differences of Arrival)とは
 電波を用いた位置推定手法でありTOA(Time of Arrival)とよく比較される．
 Time of Arrivalでは電波を発信する送信機と位置推定を行う受信機との構成で行われる．
 送信機と受信機で時刻同期を行った上で，各送信機からの伝播時間を計測．
 この電波時間から距離を計算し，複数の送信機を用いると位置推定を行う事が出来る．
+この例では倉庫内でTDOAを用いて自己位置推定を行い，QRコードの貼られている荷物を検知してまわる．
+という内容になっている．
 
 一方でTDOAでは時刻同期の必要はなく，送信されてくる電波の時間差を用いて位置推定を行う．
 今回挙げているこの例ではTDOAによる位置測位を行うのにUWBを電波として用いている．
+
 
 
 %%% Local Variables:
