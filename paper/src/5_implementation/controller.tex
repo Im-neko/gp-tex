@@ -11,4 +11,69 @@
 
 この際推定誤差によって大きく外れた値が推定される事があり，毎フレーム推定と制御を行うと外れ値を制御に利用してしまうこととなる．
 その為，今回は20フレーム分バッファを作り，その平均値を推定値として扱うようにした．
+実際に移動する際には以下の\_move関数~\ref{move_method}を用いており，
+次のcheck\_standby関数~\ref{check_standby}がTrueを返すようになるまでQRコードに対して誤差±10cmになるように位置の補正を行う
 
+\begin{lstlisting}[caption=move method code,label=move_method]
+def _move(self, data):          
+    self.is_moving = True
+    # move x                   
+    if data["x"] >= 10:            
+        self.drone.move_right(data["x"])
+        time.sleep(data["x"]/self.SPEED + self.COMMAND_WAIT_BUFFER)
+        print('sleep x: ', data["x"]/self.SPEED +
+            self.COMMAND_WAIT_BUFFER)
+    elif data["x"] <= -10:
+        self.drone.move_left(-data["x"])
+        time.sleep(-data["x"]/self.SPEED + self.COMMAND_WAIT_BUFFER)
+        print('sleep x: ', -data["x"]/self.SPEED +                                                                                                           
+            self.COMMAND_WAIT_BUFFER)
+    # move y
+    if data["y"] >= 10:
+        self.drone.move_down(data["y"])
+        time.sleep(data["y"]/self.SPEED + self.COMMAND_WAIT_BUFFER)
+        print('sleep y: ', data["y"]/self.SPEED +
+            self.COMMAND_WAIT_BUFFER)
+    elif data["y"] <= -10:
+        self.drone.move_up(-data["y"])
+        time.sleep(-data["y"]/self.SPEED + self.COMMAND_WAIT_BUFFER)
+        print('sleep y: ', -data["y"]/self.SPEED +
+            self.COMMAND_WAIT_BUFFER)
+    # move z
+    if data["z"] >= 10:
+        self.drone.move_forward(data["z"])
+        time.sleep(data["z"]/self.SPEED + self.COMMAND_WAIT_BUFFER)
+        print('sleep z: ', data["z"]/self.SPEED +
+            self.COMMAND_WAIT_BUFFER)
+    elif data["z"] <= -10:
+        self.drone.move_backward(-data["z"])
+        time.sleep(-data["z"]/self.SPEED + self.COMMAND_WAIT_BUFFER)
+        print('sleep z: ', -data["z"]/self.SPEED +
+            self.COMMAND_WAIT_BUFFER)
+    # rotate r
+    if data["r"] > 0:
+        self.drone.rotate_cw(data["r"])
+    else:
+        self.drone.rotate_ccw(-data["r"])
+    time.sleep(self.COMMAND_WAIT_BUFFER)
+    # initialize values
+    self.is_moving = False
+    self.is_standby = False
+    self.drone_pos_list = []
+    self.drone_rotate_list = []
+    return
+\end{lstlisting}
+
+\begin{lstlisting}[caption=check standby method, label=check_standby]
+def check_standby(self):
+    x_val = int(self.drone_pos["x"] - (self.QR_SIZE/2))
+    y_val = int(self.drone_pos["y"] - (self.QR_SIZE/2))
+    z_val = int(self.drone_pos["z"] - self.Z_SPACE)
+    rotate_val = int(self.drone_pos["r"])
+    self.is_standby = -self.permit_noise < x_val and self.permit_noise > x_val and \
+        -self.permit_noise < y_val and self.permit_noise > y_val and \
+        -self.permit_noise < z_val and self.permit_noise > z_val and \
+        -self.permit_noise < rotate_val and self.permit_noise > rotate_val
+    print('check: ', x_val, y_val, z_val, rotate_val)
+    print('is_standby: ', self.is_standby)
+\end{lstlisting}
